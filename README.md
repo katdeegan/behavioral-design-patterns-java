@@ -44,3 +44,25 @@ _Example:_
 The code demonstrating how these patterns compare form a _**decoupling and performance**_ perspective can be found here: [`patternComparison/observerVsCommand/`](src/main/java/patternComparison/observerVsCommand).
 
 The demo can be run via the file: [ObserverVsCommand.java](src/main/java/patternComparison/observerVsCommand/src/main/java/patternComparison/observerVsCommand/ObserverVsCommand.java)
+
+### **1. Strategy vs State**: Encapsulation Comparison
+
+Both the Strategy and State patterns focus on encapsulating a certain set of behaviors as objects, and allowing these behaviors to be swapped at runtime.
+
+The **Strategy Pattern** encapsulates an interchangeable family of algorithms by first defining a common interface that these algorithms must implement. This allows the Client to select which algorithm to use at runtime, offering furture flexibility and extensibility as algorithms can be added or modified without affecting existing code.
+
+The **State Pattern** encapsulates state-dependent behavior, meaning changes in object behavior happen automatically in response to state changes, making objects appear to have changed classes.
+
+_Findings:_
+
+Both Strategy and State patterns favor **_Composition over Inheritance_** through behavior encapsulation, however the decision on which pattern to use has a lot to do with the use-case.
+
+The Strategy Pattern could be more appropiate when you select an algorithm at runtime, and the context that is delegating to this algorithm object does not fundamentally change. Examples might include selecting between different file compression or sorting algorithms.
+
+The State Pattern could prove more useful when the context object is changing conditions frequently, and certain behaviors are dependent on that state. In this case, you likely want the object to manage its own state transitions (as opposed to interventions from the client). Examples might include order processing or a document workflow.
+
+_Example:_
+
+The code demonstrating how these patterns compare form an _**encapsulation**_ perspective can be found here: [`patternComparison/strategyVsState/`](src/main/java/patternComparison/strategyVsState).
+
+The demo can be run via the file: [StrategyVsState.java](src/main/java/patternComparison/strategyVsState/StrategyVsState.java)
