@@ -85,3 +85,29 @@ The State Pattern could prove more useful when the context object is changing co
 If an algorithm always follows the same order of steps, but these steps may vary in implementation or occasionally be skipped all together, the Template Method could be a good choice, as it offers the simplest implementation of the three patterns. An example might be a file processing system, where the file is processed in the same order each time, but certain steps my vary depending on the file type.
 
 While all patterns allow for operations to be encapsulated, the State and Strategy allow for encapsulation of the entire algorithm, meaning the steps and implementation of these algorithms can be as similar or dissimilar as desired. This offered a greater degree of flexibility over the Template Method.
+
+### **3. Chain of Responsibility vs Mediator**: Extensibility and Complexity Comparison
+
+The Chain of Responsibility and Mediator patterns are intended to simplify communication between objects through reduced coupling and increased flexibility in case object interactions or responsibilities change.
+
+The **Mediator Pattern** centralizes communication between a system of components through one Mediator object. System components do not call on each other directly, they instead only have a reference to a common Mediator and direct all communication there.
+
+The **Chain of Responsibility Pattern** ensure loose coupling between the sender and receiver of a request by establishing a succession of receiving objects that will either handle a sender's request or pass it along to the next object in the chain. Each Handler object only contains a reference to the next Handler object in the chain.
+
+\_\_
+
+_Example:_
+
+The code demonstrating how these patterns compare form an _**extensibility and complexity**_ perspective can be found here: [`patternComparison/chainOfResponsibilityVsMediator`](src/main/java/patternComparison/chainOfResponsibilityVsMediator).
+
+The demo can be run via the file: [ChainOfResponsibilityVsMediator.java](src/main/java/patternComparison/chainOfResponsibilityVsMediator/ChainOfResponsibilityVsMediator.java)
+
+\_\_
+
+_Findings:_
+
+The biggest trade-off with the Mediator pattern is that it can lead to a highly complex object that violates the OOD Single Responsibility Principle, as all logic related to facilitating object communication (i.e. message routing, enforcing communication rules, etc.) resides in a single object. However, because of the centralized communication hub, it has extensibility advantages as adding or modifying communication rules happens in one place.
+
+With the Chain of Responsibility pattern, the Single Responsibility Principle generally remains in-tact, as each Handler is responsible for a specific type of request, however performance can be effected if a high-priority request is passed through the entire handler chain, resulting in O(n) complexity for a chain of n Handlers.
+
+Both patterns do well from an extensibility perspective, as it is easy to add new Components to the Mediator and to add/remove/reorder Handlers in the Chain of Responsibility.
