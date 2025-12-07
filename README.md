@@ -59,9 +59,7 @@ All pattern comparison demos can be run via the JUnit test file: [`PatternCompar
 10. Template Method
 11. Visitor'
 
-Simple example implementations for each of these patterns is located in the [`behavioralDesignPatterns/`](src/main/java/behavioralDesignPatterns) directory.
-
-Specific demos can be run in IntelliJ via the `<PatternName>Demo.java` file in each pattern's directory. All pattern demos can be run at once via the test file: `RunAllDemos.java`(src/test/java/behavioralDesignPatterns/RunAllDemos.java).
+Simple example implementations for each of these patterns is located in the [`behavioralDesignPatterns`](src/main/java/behavioralDesignPatterns) directory.
 
 ## Pattern Comparison
 
