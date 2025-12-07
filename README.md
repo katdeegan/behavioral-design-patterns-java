@@ -2,7 +2,50 @@
 
 This project demonstrates all **11 Behavioral Design Patterns** from the Gang of Four, implemented in Java.
 
-### GoF Behavioral Design Patterns:
+The [`behavioralDesignPatterns`](src/main/java/behavioralDesignPatterns) directory contains example code for each individual pattern, and the [`patternComparison`](src/main/java/patternComparison) directory includes head-to-head comparisons between similar patterns, and highlights the strengths and trade-offs of each from an encapsulation, decoupling, extensibility, and performance perspective.
+
+## Dependencies
+- **Java Development Kit (JDK)** (Java versions 21+ used to develop)
+- **JUnit 5** (Optional - for testing framework)
+
+## Build Instructions
+### Option 1: Command Line Build (No Build Tool)
+
+#### Build Individual Patterns
+```bash
+cd src/main/java/behavioralDesignPatterns/<patternName>
+javac *.java
+```
+
+#### Build Comparison Examples
+```bash
+cd java/patternComparison/<comparisonName>
+javac *.java
+```
+### Option 2: Build with Gradle
+
+From the project root, run: `./gradlew build`
+
+## Test Instructions
+
+### Running Individual Pattern Examples
+
+Each subdirectory in [`behavioralDesignPatterns`](src/main/java/behavioralDesignPatterns) and [`patternComparison`](src/main/java/patternComparison) contains a `main()` method with demonstrations.
+
+```bash
+# Example: Run Observer pattern
+cd src/main/java/behavioralDesignPatterns/observer
+javac *.java
+java ObserverDemo.java
+```
+
+### Running Demos as JUnit Tests
+
+All pattern demos can be run via the JUnit test file: [`RunAllDemos.java`](src/test/java/behavioralDesignPatterns/RunAllDemos.java)
+
+All pattern comparison demos can be run via the JUnit test file: [`PatternComparisonTest.java`](src/test/java/patternComparison/PatternComparisonTest.java)
+
+## GoF Behavioral Design Patterns:
 
 1. Chain of Responsibility
 2. Command

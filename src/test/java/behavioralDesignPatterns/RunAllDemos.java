@@ -1,5 +1,8 @@
 package behavioralDesignPatterns;
 
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+
 import behavioralDesignPatterns.chainOfResponsibility.ChainDemo;
 import behavioralDesignPatterns.command.CommandDemo;
 import behavioralDesignPatterns.interpreter.InterpreterDemo;
@@ -13,28 +16,70 @@ import behavioralDesignPatterns.templateMethod.TemplateMethodDemo;
 import behavioralDesignPatterns.visitor.VisitorDemo;
 
 public class RunAllDemos {
-    public static void main(String[] args) {
-        System.out.println("--- 1. CHAIN OF RESPONSIBILITY ---");
-        ChainDemo.main(args);
-        System.out.println("--- 2. COMMAND ---");
-        CommandDemo.main(args);
-        System.out.println("--- 3. INTERPRETER ---");
-        InterpreterDemo.main(args);
-        System.out.println("--- 4. ITERATOR ---");
-        IteratorDemo.main(args);
-        System.out.println("--- 5. MEDIATOR ---");
-        MediatorDemo.main(args);
-        System.out.println("--- 6. MEMENTO ---");
-        MementoDemo.main(args);
-        System.out.println("--- 7. OBSERVER ---");
-        ObserverDemo.main(args);
-        System.out.println("--- 8. STATE ---");
-        StateDemo.main(args);
-        System.out.println("--- 9. STRATEGY ---");
-        StrategyDemo.main(args);
-        System.out.println("--- 10. TEMPLATE ---");
-        TemplateMethodDemo.main(args);
-        System.out.println("--- 11. VISITOR ---");
-        VisitorDemo.main(args);
+    @Test
+    @DisplayName("CHAIN OF RESPONSIBILITY")
+    void demoChainOfResponsibility() {
+        ChainDemo.main(new String[]{});
     }
+
+    @Test
+    @DisplayName("COMMAND")
+    void demoCommand() {
+        CommandDemo.main(new String[]{});
+    }
+
+    @Test
+    @DisplayName("INTERPRETER")
+    void demoInterpreter() {
+        InterpreterDemo.main(new String[]{});
+    }
+
+    @Test
+    @DisplayName("ITERATOR")
+    void demoIterator() {
+        IteratorDemo.main(new String[]{});
+    }
+
+    @Test
+    @DisplayName("MEDIATOR")
+    void demoMediator() {
+        MediatorDemo.main(new String[]{});
+    }
+
+    @Test
+    @DisplayName("MEMENTO")
+    void demoMemento() {
+        MementoDemo.main(new String[]{});
+    }
+
+    @Test
+    @DisplayName("OBSERVER")
+    void demoObserver() {
+        ObserverDemo.main(new String[]{});
+    }
+
+    @Test
+    @DisplayName("STATE")
+    void demoState() {
+        StateDemo.main(new String[]{});
+    }
+
+    @Test
+    @DisplayName("STRATEGY")
+    void demoStrategy() {
+        StrategyDemo.main(new String[]{});
+    }
+
+    @Test
+    @DisplayName("TEMPLATE")
+    void demoTemplate() {
+        TemplateMethodDemo.main(new String[]{});
+    }
+
+    @Test
+    @DisplayName("VISITOR")
+    void demoVisitor() {
+        VisitorDemo.main(new String[]{});
+    }
+
 }
