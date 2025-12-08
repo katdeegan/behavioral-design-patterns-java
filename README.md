@@ -4,24 +4,31 @@ This project demonstrates all **11 Behavioral Design Patterns** from the Gang of
 
 The [`behavioralDesignPatterns`](src/main/java/behavioralDesignPatterns) directory contains example code for each individual pattern, and the [`patternComparison`](src/main/java/patternComparison) directory includes head-to-head comparisons between similar patterns, and highlights the strengths and trade-offs of each from an encapsulation, decoupling, extensibility, and performance perspective.
 
+This repository contains supplementary and example code for the research study _**“A Comparative Exploration of Behavioral Design Patterns in OOP.”**_ The corresponding paper can be found here: [Comparative_Exploration_Behavioral_Patterns_OOP.pdf](Comparative_Exploration_Behavioral_Patterns_OOP.pdf).
+
 ## Dependencies
+
 - **Java Development Kit (JDK)** (Java versions 21+ used to develop)
 - **JUnit 5** (Optional - for testing framework)
 
 ## Build Instructions
+
 ### Option 1: Command Line Build (No Build Tool)
 
 #### Build Individual Patterns
+
 ```bash
 cd src/main/java/behavioralDesignPatterns/<patternName>
 javac *.java
 ```
 
 #### Build Comparison Examples
+
 ```bash
 cd java/patternComparison/<comparisonName>
 javac *.java
 ```
+
 ### Option 2: Build with Gradle
 
 From the project root, run: `./gradlew build`
